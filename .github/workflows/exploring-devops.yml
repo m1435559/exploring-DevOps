@@ -26,3 +26,12 @@ jobs:
 
       - name: Run the App
         run: node server.js
+
+      - name: Wait for Server to Start
+        run: sleep 5
+
+      - name: Test Server with curl
+        run: curl http://localhost:3000
+
+      - name: Kill the App
+        run: kill $(jobs -p)
