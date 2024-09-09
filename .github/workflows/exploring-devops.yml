@@ -34,4 +34,4 @@ jobs:
         run: curl http://localhost:3000
 
       - name: Kill the App
-        run: kill $(jobs -p)
+        run: pkill -f "node server.js"
